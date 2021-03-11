@@ -24,7 +24,7 @@ const TeamDetails = () => {
     const genderImg = detail.strGender==="Male" ? maleImg : femaleImg;
     return (
         <div>
-            <Card className="bg-dark text-white DetailHeaderImg">
+            <Card className="bg-dark text-white DetailHeaderImg d-flex">
                 {/* <Card.Img src="https://img.uefa.com/imgml/uefacom/ucl/social/og-default.jpg" fluid alt="Card image" /> */}
                 <Card.Img src={detail.strStadiumThumb} fluid alt="Card image" />
                 <Card.ImgOverlay>
