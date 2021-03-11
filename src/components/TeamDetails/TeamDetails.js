@@ -20,24 +20,25 @@ const TeamDetails = () => {
         .then(data =>setDetail(data.teams[0]))
 
     },[teamId])
-    console.log(detail.strTeam);
+    //console.log(detail.strTeam);
+    const{strStadiumThumb,strTeamBadge,strAlternate,intFormedYear,strCountry,strSport,strGender,strDescriptionEN}=detail
     const genderImg = detail.strGender==="Male" ? maleImg : femaleImg;
     return (
         <div>
             <Card className="bg-dark text-white DetailHeaderImg">
                 {/* <Card.Img src="https://img.uefa.com/imgml/uefacom/ucl/social/og-default.jpg" fluid alt="Card image" /> */}
-                <Card.Img src={detail.strStadiumThumb} fluid alt="Card image" />
+                <Card.Img src={strStadiumThumb} fluid alt="Card image" />
                 <Card.ImgOverlay>
-                     <Card.Title className='teamImg'><Card.Img src={detail.strTeamBadge} fluid/></Card.Title>
+                     <Card.Title className='teamImg'><Card.Img src={strTeamBadge} fluid/></Card.Title>
                 </Card.ImgOverlay>
             </Card>
             <Container className='aboutTeam'>
                 <div>
-                    <p className='TeamName'>{detail.strAlternate}</p>
-                    <p><FontAwesomeIcon icon={faFlag}/> Founded: {detail.intFormedYear}</p>
-                    <p><FontAwesomeIcon icon={faGlobe}/> Country: {detail.strCountry}</p>
-                    <p><FontAwesomeIcon icon={faFutbol}/> Sports Type: {detail.strSport}</p>
-                    <p><FontAwesomeIcon icon={faMars}/> Gender: {detail.strGender}</p>
+                    <p className='TeamName'>{strAlternate}</p>
+                    <p><FontAwesomeIcon icon={faFlag}/> Founded: {intFormedYear}</p>
+                    <p><FontAwesomeIcon icon={faGlobe}/> Country: {strCountry}</p>
+                    <p><FontAwesomeIcon icon={faFutbol}/> Sports Type: {strSport}</p>
+                    <p><FontAwesomeIcon icon={faMars}/> Gender: {strGender}</p>
                 </div>
                 <span className='genderImg'>
                     <img src={genderImg} fluid alt=""/>
@@ -48,7 +49,7 @@ const TeamDetails = () => {
             {/* <p>{detail.strTeam}</p> */}
             <Container>
                 <h3>About Team:</h3>
-                <i><small>{detail.strDescriptionEN}</small></i>
+                <i><small>{strDescriptionEN}</small></i>
                 <br/><br/>
                 <i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ut corrupti consectetur alias, nihil tempore sequi consequatur consequuntur cumque soluta necessitatibus facilis voluptas architecto voluptatibus. Quibusdam ducimus neque deleniti incidunt laboriosam nemo adipisci error eos veniam optio, dolores aspernatur velit obcaecati aliquid. Autem at non, sit corrupti ullam iste rem.</i>
             </Container>
