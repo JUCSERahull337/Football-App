@@ -11,4 +11,7 @@ Live site link: https://onefootballapp.netlify.app/
 * One can see the all teams of premire league
 * They also can see team details by clicking on 'see more' button
 
+## Technology Used:
+- React JS, Bootstrap,API, Hooks
+
 
